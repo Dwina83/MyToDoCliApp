@@ -1,7 +1,6 @@
 name: Print Repo and Branch Name
 
-on: 
-  push:
+on: workflow_dispatch
 
 jobs:
   print-info:
