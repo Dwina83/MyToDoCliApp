@@ -1,0 +1,17 @@
+name: Print Repo and Branch Name
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  print-info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print repository and branch name
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
