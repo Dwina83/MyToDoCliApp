@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   print-info:
-    runs-on: ubuntu-latest4
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
