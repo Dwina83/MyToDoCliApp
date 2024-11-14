@@ -14,7 +14,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Print GitHub context info
-        run: echo "${{(toJson(github)}}"
+        run: echo "${{toJson(github)}}"
       - name: Print repo name
         run: echo "${{(github.repository)}}"
       - name: Print event
