@@ -6,7 +6,7 @@ on:
       number: 
         description: 'Enter a number to check: '
         required: true
-        type: integer
+        type: number
 
 jobs:
   check-number:  
