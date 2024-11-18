@@ -7,14 +7,22 @@ on:
         description: 'Enter a number to check: '
         required: true
         type: number
+        
 
 jobs:
+
   check-number:  
     runs-on: ubuntu-latest
+    env: 
+      passing_score: 7
     steps: 
       - name: Check if the number is less than 7
-        if: ${{ toJson(github.events.inputs.number) >=7 }}
-        run: echo "The input is larger than 7. Proceeding with the job"
+        
+        run: |
+          echo input_value=$(expr "${{ github.events.inputs.number }}" + 0)
+          if [ "$input_value" -lt "$passing_score" ]; then
+          exit 1
+        fi 
         
     
         
