@@ -1,0 +1,21 @@
+name: Exercise Context
+
+on:
+  workflow_dispatch: 
+    inputs:
+      number: 
+        description: 'Enter a number to check: '
+        required: true
+        type: string
+
+jobs:
+  check-number:  
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check if the number is less than 7
+        if: ${{ github.events.inputs.number >=7 }}
+        run: echo "The input is larger than 7. Proceeding with the job"
+        
+    
+        
+  
