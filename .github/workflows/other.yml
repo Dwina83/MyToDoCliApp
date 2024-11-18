@@ -21,8 +21,8 @@ jobs:
         run: |
           echo input_value=$(expr "${{ github.events.inputs.number }}" + 0)
           if [ "$input_value" -lt "$passing_score" ]; then
-          exit 1
-        fi 
+            exit 1
+          fi 
         
     
         
